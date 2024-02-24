@@ -1,0 +1,85 @@
+/*CSS reset settings here*/
+
+#wrapper{
+    background-color: silver;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+#header{
+    min-height: 150px;
+    width: auto;
+    background-color: green;
+}
+#navigation{
+    height: 400px;
+    width: 50%;
+    background-color: blue;
+    margin: 0.5rem 0.75rem 0 0;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+#main_content{
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    min-width: 40%;
+    width: 100%;
+    background-color: red;
+    margin: 0.5rem 0 0 0;
+    padding: 1rem;
+}
+
+.containerSubcontents{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.subcontents{
+    min-height: 200px;
+    box-sizing: border-box;
+    flex: 1 0 30%;
+    background-color: yellow;
+    margin: 0 0.5rem 0.5rem 0;
+}
+
+.subcontents:last-child{
+    display: none;
+}
+
+#advertisement{
+    min-height: 120px;
+    width: auto;
+    background-color: purple;
+    margin-top: 1rem;
+}
+
+@media (width <= 1024px) {
+    .subcontents{
+        flex: 1 0 47%;
+    }
+    #navigation{
+        display: none;
+    }
+    .subcontents:last-child{
+        display: block;
+        visibility: hidden;
+    }
+}
+
+@media (width <=480px) {
+    .subcontents{
+        flex: 1 0 100%;
+    }
+    #navigation{
+        display: none;
+    }
+    .subcontents:last-child{
+        display: none;
+    }
+}
